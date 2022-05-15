@@ -49,7 +49,7 @@ input[type="radio"] {
 .slide {
   width: 20%;
   height: 100%;
-  transition: 0.25s;
+  transition: 0.4s;
 }
 
 .slide img {
@@ -67,6 +67,27 @@ input[type="radio"] {
 
 .text-box {
   max-width: 75%;
+  overflow: hidden;
+}
+
+.text-slider {
+  width: 500%;
+  display: flex;
+  transition: 0.4s;
+}
+
+.text-slide {
+  width: 20%;
+  
+}
+
+.text {
+  font-size: 26px;
+  color: #FFA500;
+}
+
+.text:hover {
+  color: #FFFFFF;
 }
 
 .labels-box {
@@ -131,4 +152,24 @@ label {
 
 #radio5:checked ~ .image-box .slide1 {
   margin-left: -80%;
+}
+
+#radio1:checked ~ .info-box .text-slider {
+  margin-left: -400%;
+}
+
+#radio2:checked ~ .info-box .text-slider {
+  margin-left: -300%;
+}
+
+#radio3:checked ~ .info-box .text-slider {
+  margin-left: -200%;
+}
+
+#radio4:checked ~ .info-box .text-slider {
+  margin-left: -100%;
+}
+
+#radio5:checked ~ .info-box .text-slider {
+  margin-left: 0;
 }
