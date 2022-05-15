@@ -43,11 +43,13 @@ input[type="radio"] {
   width: 500%;
   height: 100%;
   display: flex;
+  
 }
 
 .slide {
   width: 20%;
   height: 100%;
+  transition: 0.25s;
 }
 
 .slide img {
@@ -109,4 +111,24 @@ label {
 #radio4:checked ~ .info-box label[for="radio4"] .radio-label-square:hover > .radio-label-circle,
 #radio5:checked ~ .info-box label[for="radio5"] .radio-label-square:hover > .radio-label-circle {
   border: solid 3px #FFFFFF;
+}
+
+#radio1:checked ~ .image-box .slide1 {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .image-box .slide1 {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .image-box .slide1 {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .image-box .slide1 {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .image-box .slide1 {
+  margin-left: -80%;
 }
