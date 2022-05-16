@@ -8,7 +8,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: start;
   background: #2F2F2F;
 }
 
@@ -17,15 +17,15 @@ h1 {
 }
 
 .wrapper {
-  margin: 0 auto;
+  margin: 1.2rem auto;
   width: 90vw;
-  height: 90vh;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   
   background: #000000;
-  border: solid 3px #FFA500;
-  border-radius: 6px;
+  border: solid 0.2rem #FFA500;
+  border-radius: 0.4rem;
 }
 
 input[type="radio"] {
@@ -34,7 +34,7 @@ input[type="radio"] {
 
 .image-box {
   width: 95%;
-  height: 70%;
+  max-height: 70%;
   margin: 10px auto;
   overflow: hidden;
 }
@@ -54,6 +54,9 @@ input[type="radio"] {
 
 .slide img {
   display: block;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -87,7 +90,8 @@ input[type="radio"] {
 }
 
 .text:hover {
-  color: #FFFFFF;
+  color: #00FF00;
+  transition: 0.1s;
 }
 
 .labels-box {
@@ -172,4 +176,51 @@ label {
 
 #radio5:checked ~ .info-box .text-slider {
   margin-left: 0;
+}
+
+footer {
+  width: 95%;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+footer span {
+  font-size: 18px;
+  color: #FFA500;
+}
+
+.footnotes {
+  margin: 10px auto;
+  max-width: 30rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footnotes span {
+  color: #0000FF;
+}
+
+.footnotes a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #0000FF;
+}
+
+.footnotes a:hover {
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 800px) {
+  .info-box {
+    flex-direction: column;
+  }
+
+  .text-box {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .labels-box {
+    align-self: center;
+  }
 }
