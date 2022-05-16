@@ -35,7 +35,7 @@ input[type="radio"] {
 .image-box {
   width: 95%;
   max-height: 70%;
-  margin: 10px auto;
+  margin: 0.5rem auto;
   overflow: hidden;
 }
 
@@ -62,10 +62,11 @@ input[type="radio"] {
 
 .info-box {
   width: 95%;
-  margin: 10px auto;
+  margin: 0.5rem auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .text-box {
@@ -85,7 +86,7 @@ input[type="radio"] {
 }
 
 .text {
-  font-size: 26px;
+  font-size: 1.5rem;
   color: #FFA500;
 }
 
@@ -99,20 +100,20 @@ input[type="radio"] {
 }
 
 label {
-  margin: 5px;
+  margin: 0.5rem;
   cursor: pointer;
 }
 
 .radio-label-square {
-  width: 25px;
-  height: 25px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .radio-label-circle {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  margin: 5px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
   background: #FFA500;
 }
 
@@ -127,7 +128,7 @@ label {
 #radio4:checked ~ .info-box label[for="radio4"] .radio-label-circle,
 #radio5:checked ~ .info-box label[for="radio5"] .radio-label-circle {
   background-color: transparent;
-  border: solid 3px #FFA500;
+  border: solid 0.2rem #FFA500;
 }
 
 #radio1:checked ~ .info-box label[for="radio1"] .radio-label-square:hover > .radio-label-circle,
@@ -135,7 +136,7 @@ label {
 #radio3:checked ~ .info-box label[for="radio3"] .radio-label-square:hover > .radio-label-circle,
 #radio4:checked ~ .info-box label[for="radio4"] .radio-label-square:hover > .radio-label-circle,
 #radio5:checked ~ .info-box label[for="radio5"] .radio-label-square:hover > .radio-label-circle {
-  border: solid 3px #FFFFFF;
+  border: solid 0.2rem #FFFFFF;
 }
 
 #radio1:checked ~ .image-box .slide1 {
@@ -180,17 +181,17 @@ label {
 
 footer {
   width: 95%;
-  margin: 20px auto 0;
+  margin: 1.2rem auto 0;
   text-align: center;
 }
 
 footer span {
-  font-size: 18px;
+  font-size: 1.1rem;
   color: #FFA500;
 }
 
 .footnotes {
-  margin: 10px auto;
+  margin: 0.5rem auto;
   max-width: 30rem;
   display: flex;
   justify-content: space-between;
@@ -202,7 +203,7 @@ footer span {
 
 .footnotes a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: #0000FF;
 }
 
@@ -213,11 +214,16 @@ footer span {
 @media screen and (max-width: 800px) {
   .info-box {
     flex-direction: column;
+    margin: 0 auto 0.5rem;
   }
 
   .text-box {
     order: 2;
     max-width: 100%;
+  }
+
+  .text {
+    font-size: 1.3rem;
   }
 
   .labels-box {
