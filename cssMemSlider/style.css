@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background: #2F2F2F;
+}
+
+h1 {
+  display: none;
+}
+
+.wrapper {
+  margin: 1.2rem auto;
+  max-width: 60rem;
+  width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+  border: solid 0.2rem #FFA500;
+  border-radius: 0.4rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.image-box {
+  max-width: 45rem;
+  width: 95%;
+  height: fit-content;
+  margin: 0.5rem auto;
+  border: 0.1rem solid #FFFFFF;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+
+.slider {
+  width: 500%;
+  height: 100%;
+  align-items: flex-start;
+  display: flex;
+  
+}
+
+.slide {
+  width: 20%;
+  height: 100%;
+  transition: 0.4s;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+}
+
+.info-box {
+  width: 95%;
+  max-width: 45rem;
+  margin: 0.5rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-box {
+  max-width: 75%;
+  overflow: hidden;
+}
+
+.text-slider {
+  width: 500%;
+  display: flex;
+  transition: 0.4s;
+}
+
+.text-slide {
+  width: 20%;
+  
+}
+
+.text {
+  font-size: 1.5rem;
+  color: #FFA500;
+}
+
+.text:hover {
+  color: #00FF00;
+  transition: 0.1s;
+}
+
+.labels-box {
+  display: flex;
+  margin-right: -0.5rem;
+}
+
+label {
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.radio-label-square {
+  width: 2rem;
+  height: 2rem;
+}
+
+.radio-label-circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  background: #FFA500;
+}
+
+.radio-label-square:hover .radio-label-circle {
+  background: #FFFFFF;
+}
+
+.radio-label-square:active .radio-label-circle {
+  box-shadow: 0 0 0.5rem 0.5rem #00FF00;
+}
+
+#radio1:checked ~ .info-box label[for="radio1"] .radio-label-circle,
+#radio2:checked ~ .info-box label[for="radio2"] .radio-label-circle,
+#radio3:checked ~ .info-box label[for="radio3"] .radio-label-circle,
+#radio4:checked ~ .info-box label[for="radio4"] .radio-label-circle,
+#radio5:checked ~ .info-box label[for="radio5"] .radio-label-circle {
+  background-color: transparent;
+  border: solid 0.2rem #FFA500;
+}
+
+#radio1:checked ~ .info-box label[for="radio1"] .radio-label-square:hover > .radio-label-circle,
+#radio2:checked ~ .info-box label[for="radio2"] .radio-label-square:hover > .radio-label-circle,
+#radio3:checked ~ .info-box label[for="radio3"] .radio-label-square:hover > .radio-label-circle,
+#radio4:checked ~ .info-box label[for="radio4"] .radio-label-square:hover > .radio-label-circle,
+#radio5:checked ~ .info-box label[for="radio5"] .radio-label-square:hover > .radio-label-circle {
+  border: solid 0.2rem #FFFFFF;
+}
+
+#radio1:checked ~ .image-box .slide1 {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .image-box .slide1 {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .image-box .slide1 {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .image-box .slide1 {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .image-box .slide1 {
+  margin-left: -80%;
+}
+
+#radio1:checked ~ .info-box .text-slider {
+  margin-left: -400%;
+}
+
+#radio2:checked ~ .info-box .text-slider {
+  margin-left: -300%;
+}
+
+#radio3:checked ~ .info-box .text-slider {
+  margin-left: -200%;
+}
+
+#radio4:checked ~ .info-box .text-slider {
+  margin-left: -100%;
+}
+
+#radio5:checked ~ .info-box .text-slider {
+  margin-left: 0;
+}
+
+footer {
+  width: 95%;
+  margin: 1.2rem auto 0;
+  text-align: center;
+}
+
+footer span {
+  font-size: 1.1rem;
+  color: #FFA500;
+}
+
+.footnotes {
+  margin: 0.5rem auto;
+  max-width: 30rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footnotes span {
+  color: #0000FF;
+}
+
+.footnotes a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #0000FF;
+}
+
+.footnotes a:hover {
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 800px) {
+  .info-box {
+    flex-direction: column;
+    margin: 0 auto 0.5rem;
+  }
+
+  .text-box {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .text {
+    font-size: 1.3rem;
+  }
+
+  .labels-box {
+    align-self: center;
+    margin-right: 0;
+  }
+}
