@@ -131,10 +131,6 @@ label {
   box-shadow: 0 0 0.5rem 0.5rem #00FF00;
 }
 
-/* input[type="radio"]:checked ~ .info-box .radio-label-square:active .radio-label-circle {
-  box-shadow: none;
-} */
-
 #radio1:checked ~ .info-box label[for="radio1"] .radio-label-circle,
 #radio2:checked ~ .info-box label[for="radio2"] .radio-label-circle,
 #radio3:checked ~ .info-box label[for="radio3"] .radio-label-circle,
